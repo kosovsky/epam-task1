@@ -13,10 +13,60 @@ public class Company {
    /** @pdOid e8c63ffd-8097-4957-8c13-8d16abbe5052 */
    private int name;
    
-   /** @pdRoleInfo migr=no name=Department assc=association2 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
+   /** @pdRoleInfo migr=no name=Employer assc=association2 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
+   public java.util.Collection<Employer> employer;
+   /** @pdRoleInfo migr=no name=Department assc=association3 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
    public java.util.Collection<Department> department;
    
    
+   /** @pdGenerated default getter */
+   public java.util.Collection<Employer> getEmployer() {
+      if (employer == null)
+         employer = new java.util.HashSet<Employer>();
+      return employer;
+   }
+   
+   /** @pdGenerated default iterator getter */
+   public java.util.Iterator getIteratorEmployer() {
+      if (employer == null)
+         employer = new java.util.HashSet<Employer>();
+      return employer.iterator();
+   }
+   
+   /** @pdGenerated default setter
+     * @param newEmployer */
+   public void setEmployer(java.util.Collection<Employer> newEmployer) {
+      removeAllEmployer();
+      for (java.util.Iterator iter = newEmployer.iterator(); iter.hasNext();)
+         addEmployer((Employer)iter.next());
+   }
+   
+   /** @pdGenerated default add
+     * @param newEmployer */
+   public void addEmployer(Employer newEmployer) {
+      if (newEmployer == null)
+         return;
+      if (this.employer == null)
+         this.employer = new java.util.HashSet<Employer>();
+      if (!this.employer.contains(newEmployer))
+         this.employer.add(newEmployer);
+   }
+   
+   /** @pdGenerated default remove
+     * @param oldEmployer */
+   public void removeEmployer(Employer oldEmployer) {
+      if (oldEmployer == null)
+         return;
+      if (this.employer != null)
+         if (this.employer.contains(oldEmployer))
+            this.employer.remove(oldEmployer);
+   }
+   
+   /** @pdGenerated default removeAll */
+   public void removeAllEmployer() {
+      if (employer != null)
+         employer.clear();
+   }
    /** @pdGenerated default getter */
    public java.util.Collection<Department> getDepartment() {
       if (department == null)

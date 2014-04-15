@@ -15,8 +15,10 @@ public class Employer {
    /** @pdOid d1b5af5f-9a96-4bc6-83c6-28f66442ca8b */
    private String surname;
    /** @pdOid 44831b28-a9fc-4537-9b99-bd4243dff921 */
-   private int department;
+   private String department;
    /** @pdOid 4169748f-d356-4c0d-8cf2-f004d5ec3167 */
    private Date birthdayDate;
+   /** @pdOid 9ca6a5bc-9779-4b30-9256-bad81dd61800 */
+   private double salary;
 
 }
